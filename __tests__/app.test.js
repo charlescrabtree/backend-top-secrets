@@ -40,7 +40,12 @@ describe('backend-express-template routes', () => {
     });
     const res = await agent.delete('/api/v1/users/sessions');
     expect(res.status).toBe(200);
-    expect(res.body).toMatchInlineSnapshot();
+    expect(res.body).toMatchInlineSnapshot(`
+      Object {
+        "message": "Signed out successfully",
+        "success": true,
+      }
+    `);
   });
 
   afterAll(() => {
