@@ -21,6 +21,15 @@ describe('backend-express-template routes', () => {
     });
   });
 
+  it('POST /users/sessions should sign in a user', async () => {
+    await request(app).post('/api/v1/uers').send(testUser);
+    const res = await (await request(app).post('/api/v1/users/sessions')).setEncoding({
+      email: 'user@email.com',
+      password: 'password123456',
+    });
+    expect(res.status).toEqual(200);
+  });
+
   afterAll(() => {
     pool.end();
   });
