@@ -20,5 +20,5 @@ DEFAULT CURRENT_TIMESTAMP
 
 INSERT INTO secrets (title, description)
 VALUES
-('secret secret, very hush hush', 'aliens created Idaho, government does not want you to know');
+('secret secret, very hush hush', 'aliens created Idaho, government does not want you to know'),
 ('Keith Richards should be dead', 'PUPPIES ARE SACRIFICED TO KEEP HIM ALIVE.');
